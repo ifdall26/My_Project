@@ -1,0 +1,417 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baymax</title>
+    <style>
+        body{
+            background-color: red;
+        }
+        .container{
+            position: relative;
+            margin: 50px auto;
+            width: 500px;
+            height: 600px;
+        }
+        .kepala{
+            z-index: 2;
+            position: absolute;
+            top: 50px;
+            left: 215px;
+            width: 75px;
+            height: 50px;
+            background-color: white;
+            border-top-left-radius: 50%;
+            border-top-right-radius: 50%;
+            border-bottom-left-radius: 40%;
+            border-bottom-right-radius: 40%;
+            box-shadow: inset 0px -5px 10px 1px rgba(0, 0, 0, 0.3);
+        }
+        .matakiri{
+            z-index: 2;
+            position: absolute;
+            top: 12px;
+            left: 18px;
+            width: 10px;
+            height: 10px;
+            background-color: black;
+            border-radius: 50%;
+        }
+        .container:hover .matakiri{
+            transition: 1.5s;
+            background-color: red;
+            box-shadow: 0px 0px 4px 1px rgba(255, 20, 0, 1);
+        }
+        .container:hover .matakanan{
+            transition: 1.5s;
+            background-color: red;
+            box-shadow: 0px 0px 4px 1px rgba(255, 20, 0, 1);
+        }
+        .matakanan{
+            z-index: 2;
+            position: absolute;
+            top: 12px;
+            right: 18px;
+            width: 10px;
+            height: 10px;
+            background-color: black;
+            border-radius: 50%;
+        }
+        .garismata{
+            z-index: 1;
+            position: absolute;
+            top: 16px;
+            left: 18px;
+            width: 30px;
+            height: 3px;
+            background-color: black;
+        }
+        .badan{
+            z-index: 1;
+            position: absolute;
+            top: 90px;
+            left: 153px;
+            width: 200px;
+            height: 300px;
+            background-color: white;
+            border-top-left-radius: 50%;
+            border-top-right-radius: 50%;
+            border-bottom-left-radius: 45%;
+            border-bottom-right-radius: 45%;
+            box-shadow: inset 10px -5px 25px 1px rgba(0, 0, 0, 0.3);
+        }
+        .bulat{
+            position: absolute;
+            top: 35px;
+            right: 60px;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border-radius: 50%;
+            box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.3);
+        }
+        .gbulat{
+            position: absolute;
+            top: 7px;
+            left: 2px;
+            width: 17px;
+            height: 3px;
+            background-color: lightgrey;
+        }
+        .container:hover .gbulat{
+            transition: 1.5s;
+            background-color: red;
+            box-shadow: 0px 1px 5px 1px red;
+        }
+        .belangkiri{
+            transform: rotate(-70deg);
+            position: absolute;
+            top: 90px;
+            left: -24px;
+            width: 90px;
+            height: 30px;
+            background-color: lightgrey;
+            border-radius: 50%;
+        }
+        .belangkanan{
+            transform: rotate(70deg);
+            position: absolute;
+            top: 90px;
+            right: -24px;
+            width: 90px;
+            height: 30px;
+            background-color: lightgrey;
+            border-radius: 50%;
+        }
+        .lgnkiri{
+            position: absolute;
+            z-index: 2;
+            top: 101px;
+            left: 110px;
+            transform: rotate(15deg);
+            width: 70px;
+            height: 160px;
+            background-color: white;
+            border-top-left-radius: 200%;
+            border-bottom-right-radius: 50%;
+            border-bottom-left-radius: 0%;
+            border-right: 1px solid black;
+            box-shadow: inset 5px 0 15px rgba(0, 0, 0, 0.3);
+        }
+        .tgnkiri{
+            position: absolute;
+            top: 135px;
+            width: 70px;
+            height: 90px;
+            background-color: white;
+            border-radius : 20% 20% 40% 70%;
+            box-shadow: inset 6px -10px 10px rgba(0, 0, 0, 0.2);
+        }
+        .tgnkiri1{
+            position: absolute;
+            transform: rotate(-30deg);
+            left: 20px;
+            top: 188px;
+            width: 40px;
+            height:60px;
+            background-color: white;
+            border-radius : 20% 20% 100% 97%;
+            box-shadow: inset 6px -10px 10px rgba(0, 0, 0, 0.2);
+        }
+        .jarikr1{
+            position: absolute;
+            top: 46px;
+            right: 5px;
+            width: 11px;
+            height: 27px;
+            background-color: white;
+            border-bottom-left-radius: 40%;
+            border-bottom-right-radius: 40%;
+            box-shadow: inset -2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+        }
+        .jarikr2{
+            position: absolute;
+            transform: rotate(-9deg);
+            top: 50px;
+            right: 17px;
+            width: 11px;
+            height: 27px;
+            background-color: white;
+            border-bottom-left-radius: 40%;
+            border-bottom-right-radius: 40%;
+            box-shadow: inset -2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+        }
+        .jarikr3{
+            position: absolute;
+            transform: rotate(-9deg);
+            top: 54px;
+            right: 22px;
+            width: 11px;
+            height: 27px;
+            background-color: white;
+            border-bottom-left-radius: 40%;
+            border-bottom-right-radius: 40%;
+            box-shadow: inset -2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+        }
+        .jarikr4{
+            position: absolute;
+            transform: rotate(-9deg);
+            top: 39px;
+            right: 24px;
+            width: 11px;
+            height: 42px;
+            background-color: white;
+            border-bottom-left-radius: 40%;
+            border-bottom-right-radius: 40%;
+            box-shadow: inset -2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+        }
+        .jarikn4{
+            z-index: 1;
+            position: absolute;
+            top: 55px;
+            right: 10px;
+            width: 11px;
+            height: 27px;
+            background-color: white;
+            border-bottom-left-radius: 40%;
+            border-bottom-right-radius: 40%;
+            box-shadow: inset 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+        }
+        .jarikn3{
+            position: absolute;
+            z-index: 2;
+            transform: rotate(9deg);
+            top: 46px;
+            right: 30px;
+            width: 11px;
+            height: 27px;
+            background-color: white;
+            border-bottom-left-radius: 40%;
+            border-bottom-right-radius: 40%;
+            box-shadow: inset 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+        }
+        .jarikn2{
+            position: absolute;
+            z-index: 3;
+            transform: rotate(9deg);
+            top: 54px;
+            right: 18px;
+            width: 11px;
+            height: 27px;
+            background-color: white;
+            border-bottom-left-radius: 40%;
+            border-bottom-right-radius: 40%;
+            box-shadow: inset 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+        }
+        .jarikn1{
+            position: absolute;
+            z-index: 4;
+            transform: rotate(9deg);
+            top: 42px;
+            right:9px;
+            width: 11px;
+            height: 42px;
+            background-color: white;
+            border-bottom-left-radius: 40%;
+            border-bottom-right-radius: 40%;
+            box-shadow: inset 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+        }
+        .lgnkanan{
+            position: absolute;
+            z-index: 2;
+            top: 101px;
+            right: 103px;
+            transform: rotate(-15deg);
+            width: 70px;
+            height: 160px;
+            border-left: 1px solid black;
+            background-color: white;
+            border-top-right-radius: 200%;
+            border-bottom-right-radius: 0%;
+            border-bottom-left-radius: 50%;
+            box-shadow: inset 5px 0 15px rgba(0, 0, 0, 0.3);
+        }
+        .tgnkanan{
+            position: absolute;
+            top: 135px;
+            width: 70px;
+            height: 90px;
+            background-color: white;
+            border-radius : 20% 20% 70% 40%;
+            box-shadow: inset 6px -10px 10px rgba(0, 0, 0, 0.2);
+        }
+        .tgnkanan1{
+            position: absolute;
+            transform: rotate(30deg);
+            right: 20px;
+            top: 188px;
+            width: 40px;
+            height: 60px;
+            background-color: white;
+            border-radius : 20% 20% 100% 70%;
+            box-shadow: inset -6px -10px 10px rgba(0, 0, 0, 0.2);
+        }
+        .kkiri{
+            position: absolute;
+            top: 325px;
+            left: 165px;
+            z-index: 0;
+            width: 80px;
+            height: 140px;
+            background-color: white;
+            border-top-left-radius: 100%;
+            border-bottom-left-radius: 55%;
+            border-top-right-radius: 80%;
+            border-bottom-right-radius: 65%;
+            overflow: hidden;
+            box-shadow: inset 5px 10px 10px 2px rgba(0, 0, 0, 0.4);
+        }
+        .blngkiri1{
+            box-shadow: inset 7px -5px 5px 5px rgba(0, 0, 0, 0.4);
+            position: absolute;
+            bottom: -10px;
+            left: -15px;
+            width: 90px;
+            height: 30px;
+            background-color: lightgrey;
+            border-radius: 50%;
+        }
+        .blngkiri2{
+            position: absolute;
+            transform: rotate(-65deg);
+            top: 30px;
+            left: -30px;
+            width: 90px;
+            height: 30px;
+            background-color: lightgrey;
+            border-radius: 50%;
+        }
+        .grsbdn{
+            position: absolute;
+            top: 85px;
+            left: 39px;
+            width: 120px;
+            height: 1px;
+            background-color: lightgray;
+            box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+        }
+        .kkanan{
+            position: absolute;
+            top: 325px;
+            right: 160px;
+            z-index: 0;
+            width: 80px;
+            height: 140px;
+            background-color: white;
+            border-top-left-radius: 80%;
+            border-top-right-radius: 100%;
+            border-bottom-left-radius: 65%;
+            border-bottom-right-radius: 55%;
+            overflow: hidden;
+            box-shadow: inset 5px 10px 10px 1px rgba(0, 0, 0, 0.5);
+        }
+        .blngkanan1{
+            position: absolute;
+            bottom: -10px;
+            right: -15px;
+            width: 90px;
+            height: 30px;
+            background-color: lightgrey;
+            border-radius: 50%;
+        }
+        .blngkanan2{
+            position: absolute;
+            transform: rotate(65deg);
+            top: 30px;
+            right: -30px;
+            width: 90px;
+            height: 30px;
+            background-color: lightgrey;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="kepala">
+            <div class="matakiri"></div>
+            <div class="matakanan"></div>
+            <div class="garismata"></div>
+        </div>
+        <div class="badan">
+            <div class="bulat">
+                <div class="gbulat"></div>
+            </div>
+            <div class="grsbdn"></div>
+            <div class="belangkiri"></div>
+            <div class="belangkanan"></div>
+        </div>
+        <div class="lgnkiri">
+            <div class="tgnkiri"></div>
+            <div class="tgnkiri1">
+                <div class="jarikr1"></div>
+                <div class="jarikr2"></div>
+                <div class="jarikr3"></div>
+                <div class="jarikr4"></div>
+            </div>
+        </div>
+        <div class="lgnkanan">
+            <div class="tgnkanan"></div>
+            <div class="tgnkanan1">
+                <div class="jarikn1"></div>
+                <div class="jarikn2"></div>
+                <div class="jarikn3"></div>
+                <div class="jarikn4"></div>
+            </div>
+        </div>
+        <div class="kkiri">
+            <div class="blngkiri1"></div>
+            <div class="blngkiri2"></div>
+        </div>
+        <div class="kkanan">
+            <div class="blngkanan1"></div>
+            <div class="blngkanan2"></div>
+        </div>
+    </div>
+</body>
+</html>

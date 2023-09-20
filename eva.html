@@ -1,0 +1,239 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eva</title>
+    <link rel="stylesheet" href="eva.css">
+    <style>
+        body{
+            background-color: black;
+        }
+        .container{
+            position: relative;
+            overflow: hidden;
+            width: 500px;
+            height: 500px;
+            background-color: black;
+            background-image: linear-gradient(to top, black 30%,white);
+            border: 5px solid black;
+            margin: auto;
+            border-top-left-radius: 100%;
+            border-top-right-radius: 100%;
+            box-shadow: inset -50px 20px 30px 10px rgba(0, 0, 0, 0.5);
+        }
+        .container:hover .mainbody{
+            transform: rotate(-25deg);
+            transition: 2s;
+            right: 180px;
+        }
+        .mainbody{
+            top: 200px;
+            right: -180px;
+            position: absolute;
+            transform: rotate(25deg);
+            width: 70px;
+            height: 135px;
+            background-color: white;
+            border-bottom-left-radius: 100%;
+            border-bottom-right-radius: 100%;
+        }
+        .leftbody{
+            top: 0px;
+            left: -20px;
+            position: absolute;
+            width: 55px;
+            height: 135px;
+            background-color: white;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 100%;
+        }
+        .rightbody{
+            top: 0px;
+            right: -20px;
+            position: absolute;
+            width: 55px;
+            height: 135px;
+            background-color: white;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 100%;
+            box-shadow: inset -12px -0px 5px 1px rgba(0, 0, 0, 0.5);
+        }
+        .head{
+            position: absolute;
+            transform: rotate(20deg);
+            top: -77px;
+            left: 25px;
+            width: 50px;
+            height: 70px;
+            background-color: white;
+            border-top-left-radius: 170%;
+            border-top-right-radius: 170%;
+            border-bottom-left-radius: 40%;
+            border-bottom-right-radius: 40%;
+        }
+        .lefth{
+            position: absolute;
+            top: -6px;
+            left: -26px;
+            width: 52px;
+            height: 60px;
+            background-color: white;
+            border-top-left-radius: 200%;
+            border-bottom-left-radius: 20%;
+            box-shadow: inset 20px  -10px 5px 3px rgba(0, 0, 0, 0.5);
+        }
+        .righth{
+            position: absolute;
+            top: -6px;
+            right: -25px;
+            width: 51px;
+            height: 60px;
+            background-color: white;
+            border-top-right-radius: 200%;
+            border-bottom-right-radius: 20%;
+        }
+        .midh{
+            position: absolute;
+            top: 36px;
+            right: -25px;
+            width: 100px;
+            height: 35px;
+            background-color: white;
+            border-radius: 50%;
+            box-shadow: inset 5px  -0px 5px 2px rgba(0, 0, 0, 0.5);
+        }
+        .face{
+            position: absolute;
+            transform: rotate(0deg);
+            top: 6px;
+            left: 9px;
+            width: 30px;
+            height: 0px;
+            background-color: black;
+            border-top-left-radius: 170%;
+            border-top-right-radius: 170%;
+            border-bottom-left-radius: 40%;
+            border-bottom-right-radius: 40%;
+        }
+        .leftf{
+            position: absolute;
+            top: 5px;
+            left: -25px;
+            width: 42px;
+            height: 45px;
+            background-color: black;
+            border-top-left-radius: 200%;
+            border-bottom-left-radius: 20%;
+        }
+        .lefteye{
+            position: absolute;
+            transform: rotate(13deg);
+            top: 17px;
+            left: 17px;
+            width: 20px;
+            height: 13px;
+            background-color: royalblue;
+            border-radius: 50%;
+        }
+        .rightf{
+            position: absolute;
+            top: 5px;
+            right: -25px;
+            width: 42px;
+            height: 45px;
+            background-color: black;
+            border-top-right-radius: 200%;
+            border-bottom-right-radius: 20%;
+        }
+        .righteye{
+            position: absolute;
+            transform: rotate(-13deg);
+            top: 17px;
+            right: 17px;
+            width: 20px;
+            height: 13px;
+            background-color: royalblue;
+            border-radius: 50%;
+        }
+        .midf{
+            position: absolute;
+            top: 36px;
+            right: -25px;
+            width: 80px;
+            height: 20px;
+            background-color: black;
+            border-radius: 50%;
+        }
+        .tgnkiri{
+            z-index: 2;
+            position: absolute;
+            transform: rotate(-70deg);
+            top: 45px;
+            left: -75px;
+            width: 100px;
+            height: 30px;
+            background-color: white;
+            border-top-left-radius: 250%;
+            border-top-right-radius: 150%;
+            border-bottom-left-radius: 100%;
+            border-bottom-right-radius: 50%;
+            box-shadow: inset -0px 5px 5px 3px rgba(0, 0, 0, 0.5);
+        }
+        .tgnkiri1{
+            position: absolute;
+            z-index: 1;
+            transform: rotate(-100deg);
+            top: 45px;
+            left: -48px;
+            width: 100px;
+            height: 30px;
+            background-color: white;
+            border-top-left-radius: 250%;
+            border-top-right-radius: 150%;
+            border-bottom-left-radius: 100%;
+            border-bottom-right-radius: 50%;
+            box-shadow: inset -2px -5px 5px 3px rgba(0, 0, 0, 0.5);
+        }
+        .tgnkanan{
+            position: absolute;
+            transform: rotate(25deg);
+            top: 15px;
+            right: -114px;
+            width: 100px;
+            height: 30px;
+            background-color: white;
+            border-top-left-radius: 150%;
+            border-top-right-radius: 250%;
+            border-bottom-left-radius: 180%;
+            border-bottom-right-radius: 100%;
+            box-shadow: inset -20px  5px 5px 3px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="mainbody">
+            <div class="leftbody"></div>
+            <div class="rightbody"></div>
+            <div class="head">
+                <div class="lefth"></div>
+                <div class="righth"></div>
+                <div class="midh"></div>
+                <div class="face">
+                    <div class="leftf">
+                        <div class="lefteye"></div>
+                    </div>
+                    <div class="rightf">
+                        <div class="righteye"></div>
+                    </div>
+                    <div class="midf"></div>
+                </div>
+            </div>
+            <div class="tgnkiri"></div>
+            <div class="tgnkiri1"></div>
+            <div class="tgnkanan"></div>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iron</title>
+    <style>
+        body{
+            background-color: white;
+        }
+        .container{
+            position: relative;
+            margin: auto;
+            width: 500px;
+            height: 800px;
+            border: 1px solid black;
+            overflow: hidden;
+        }
+        .table{
+            position: absolute;
+            top: 400px;
+            right: 0;
+            background-color: brown;
+            width: 400px;
+            height: 30px;
+        }
+        .table{
+            position: absolute;
+            top: 400px;
+            right: 0;
+            background-color: brown;
+            width: 400px;
+            height: 30px;
+            box-shadow: 70px 320px 5px 70px rgba(0, 0, 0, 0.5);
+        }
+        .clothes{
+            position: absolute;
+            top: 395px;
+            right: 0;
+            border-top-left-radius: 50%;
+            background-color: blue;
+            width: 300px;
+            height: 5px;
+        }
+        .tbleg1{
+            position: absolute;
+            top: 430px;
+            right: 350px;
+            background-color: brown;
+            width: 30px;
+            height: 270px;
+            border-bottom-left-radius: 50%;
+            border-bottom-right-radius: 20%;
+            box-shadow: inset 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
+        }
+        .tbleg2{
+            position: absolute;
+            z-index: -1;
+            top: 400px;
+            right: 250px;
+            background-color: brown;
+            width: 30px;
+            height: 250px;
+            border-bottom-left-radius: 20%;
+            border-bottom-right-radius: 50%;
+            box-shadow: inset 5px 5px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+        .iron{
+            position: absolute;
+            top: 370px;
+            right: 10px;
+            width: 100px;
+            height: 25px;
+            background-color: silver;
+            border-top-left-radius: 100%;
+            transition: all 1s cubic-bezier(0.22, -0.61, 0.83, 1.69);
+        }
+        .container:hover .iron{
+            right: 150px;
+        }
+        .handle1{
+            position: absolute;
+            top: -10px;
+            left: 30px;
+            width: 10px;
+            height: 20px;
+            background-color: black;
+        }
+        .handle2{
+            position: absolute;
+            top: -10px;
+            left: 70px;
+            width: 10px;
+            height: 20px;
+            background-color: black;
+        }
+        .handle3{
+            position: absolute;
+            top: -10px;
+            left: 30px;
+            width: 50px;
+            height: 10px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="table"></div>
+        <div class="clothes"></div>
+        <div class="tbleg1"></div>
+        <div class="tbleg2"></div>
+        <div class="iron">
+            <div class="handle1"></div>
+            <div class="handle2"></div>
+            <div class="handle3"></div>
+        </div>
+    </div>
+</body>
+</html>

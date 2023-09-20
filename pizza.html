@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza</title>
+    <style>
+        .container{
+            position: relative;
+            width: 1000px;
+            height: 1000px;
+            background-color: transparent;
+            margin: auto;
+            overflow: hidden;
+        }
+        .plate{
+            position: absolute;
+            width: 1000px;
+            height: 1000px;
+            background-color: silver;
+            background-image: url(img/brushed_alu.png);
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .pizza{
+            background-image: url(img/pizza.png);
+            background-size: auto;
+            background-repeat: no-repeat;
+            background-position: -100px -80px;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            width: 800px;
+            height: 800px;
+            background-color: bisque;
+            border-radius: 50%;
+        }
+        .cut1{
+            position: absolute;
+            overflow: hidden;
+            top: 220px;
+            left: -50px;
+            height:0px;
+			width:0px;
+            border-image: fill url(img/brushed_alu.png);
+			border-left:solid 550px silver;
+			border-top:solid 280px transparent;
+			border-bottom:solid 270px transparent;
+        }
+        .cut2{
+            background-image: url(img/pizza.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 220px;
+            left: -145px;
+            height:0px;
+			width:0px;
+			border-left:solid 550px bisque;
+			border-top:solid 280px transparent;
+			border-bottom:solid 270px transparent;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="plate">
+            <div class="pizza"></div>
+            <div class="cut1"></div>
+            <div class="cut2"></div>
+        </div>
+    </div>
+</body>
+</html>

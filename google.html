@@ -1,0 +1,112 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <style>
+        .container{
+            position: relative;
+            margin: 50px auto;
+            width: 500px;
+            height: 500px;
+            background-color: white;
+        }
+        .circle1{
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background-color: white;
+            border-radius: 50%;
+        }
+        .circle2{
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            width: 399px;
+            height: 399px;
+            background-color: white;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .circle3{
+            z-index: 2;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            width: 299px;
+            height: 299px;
+            background-color: white;
+            border-radius: 50%;
+        }
+        .red{
+            position: absolute;
+            top: -30px;
+            left: 0px;
+            width: 310px;
+            height: 200px;
+            background-color: red;
+        }
+        .yellow{
+            position: absolute;
+            transform: rotate(-50deg);
+            top: 260px;
+            left: -330px;
+            width: 500px;
+            height: 200px;
+            background-color: orange;
+        }
+        .green{
+            position: absolute;
+            transform: rotate(50deg);
+            top: 320px;
+            left: 10px;
+            width: 500px;
+            height: 250px;
+            background-color: green;
+        }
+        .blue{
+            position: absolute;
+            transform: rotate(50deg);
+            top: 185px;
+            left: 270px;
+            width: 150px;
+            height: 150px;
+            background-color: royalblue;
+        }
+        .white{
+            position: absolute;
+            transform: rotate(35deg);
+            top: 20px;
+            left: 285px;
+            width: 180px;
+            height: 155px;
+            background-color: white;
+        }
+        .blue2{
+            z-index: 3;
+            position: absolute;
+            transform: rotate(0deg);
+            top: 170px;
+            left: 200px;
+            width: 200px;
+            height: 50px;
+            background-color: royalblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="circle1">
+            <div class="circle2">
+                <div class="red"></div>
+                <div class="yellow"></div>
+                <div class="green"></div>
+                <div class="blue"></div>
+                <div class="white"></div>
+                <div class="blue2"></div>
+                <div class="circle3"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

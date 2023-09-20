@@ -1,0 +1,126 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YT</title>
+    <style>
+        .container{
+            position: relative;
+            width: 500px;
+            height: 1000px;
+            background-color: white;
+            margin: auto;
+        }
+        .outer{
+            top: 125px;
+            left: 200px;
+            position: absolute;
+            width: 0px;
+            height: 250px;
+            background-color: red;
+            border-radius: 15%;
+        }
+        .container:hover .outer{
+            transition: 2s;
+            top: 125px;
+            left: 50px;
+            position: absolute;
+            width: 400px;
+            height: 250px;
+            background-color: red;
+            border-radius: 15%;
+        }
+        .triangle{
+            position: absolute;
+            top: 45px;
+            left: 150px;
+            height:0px;
+			width:0px;
+			border-left:solid 0px white;
+			border-top:solid 0px transparent;
+			border-bottom:solid 0px transparent;
+        }
+        .container:hover .triangle{
+            transition: 2s;
+            position: absolute;
+            top: 45px;
+            left: 150px;
+            height:0px;
+			width:0px;
+			border-left:solid 120px white;
+			border-top:solid 80px transparent;
+			border-bottom:solid 80px transparent;
+        }
+        .ytmusic{
+            position: absolute;
+            transform: rotate(-180deg);
+            top: 700px;
+            left: 200px;
+            width: 0px;
+            height: 0px;
+            background-color: black;
+            border-radius: 0%;
+            box-shadow: 0px 0px 0px 0px white, 
+            0px 0px 0px 0px black;
+        }
+        .container:hover .ytmusic{
+            transition: 2s;
+            transform: rotate(360deg);
+            position: absolute;
+            top: 600px;
+            left: 100px;
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            border-radius: 50%;
+            box-shadow: 0px 0px 0px 5px white, 
+            0px 0px 0px 45px red;
+        }
+        .triangle2{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height:0px;
+            width:0px;
+            border-left:solid 0px white;
+            border-top:solid 0px transparent;
+            border-bottom:solid 0px transparent;
+        }
+        .container:hover .triangle2{
+            transition: 2s;
+            position: absolute;
+            top: 70px;
+            left: 100px;
+            height:0px;
+            width:0px;
+            border-left:solid 120px white;
+            border-top:solid 80px transparent;
+            border-bottom:solid 80px transparent;
+        }
+        .h11{
+            top: 65px;
+            left: 150px;
+            font-size: 50px;
+            position: absolute;
+        }
+        .h12{
+            top: 485px;
+            left: 70px;
+            font-size: 50px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="h11">Youtube</h1>
+        <div class="outer">
+            <div class="triangle"></div>
+        </div>
+        <h1 class="h12">Youtube Music</h1>
+        <div class="ytmusic">
+            <div class="triangle2"></div>
+        </div>
+    </div>
+</body>
+</html>
