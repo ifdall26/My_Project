@@ -1,0 +1,44 @@
+.jumbotron {
+  padding-top: 50px;
+  margin-top: 50px;
+  background-color: #393e46;
+  background-image: url(../img/heroimage.jpg);
+  background-size: cover;
+  background-position: 0 -20px;
+}
+.jumbotron h1 {
+  font-weight: bold;
+  color: #00adb5;
+}
+.jumbotron p {
+  color: #fff;
+}
+section {
+  margin-top: -17px;
+  min-height: 750px;
+}
+.about,
+.contact {
+  background-color: #eeeeee;
+}
+.about {
+  padding-top: 150px;
+}
+h2 {
+  color: #00adb5;
+}
+.about p {
+  text-align: justify;
+}
+.photo {
+  margin-top: -57px;
+  background-color: #393e46;
+}
+footer {
+  background-color: #393e46;
+  height: 100px;
+}
+footer p {
+  line-height: 100px;
+  color: #00adb5;
+}
