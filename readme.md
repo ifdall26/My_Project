@@ -1,6 +1,6 @@
-# Nama Proyek
+# My Project
 
-Mini Project
+Kumpulan mini Project
 
 ## Deskripsi
 
